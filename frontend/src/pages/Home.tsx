@@ -1,3 +1,7 @@
-const HomePage = () => <h1>Welcome to the Homepage!</h1>;
+const HomePage = () => (
+    <center>
+        <h1>Welcome Home!</h1>
+    </center>
+);
 
 export default HomePage;

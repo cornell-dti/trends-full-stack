@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Feature = () => {
+const Counter = () => {
     const [count, setCount] = useState(0);
 
     return (
@@ -14,4 +14,4 @@ const Feature = () => {
     );
 };
 
-export default Feature;
+export default Counter;
