@@ -1,11 +1,39 @@
-import path from "path"
-import express, {Express} from "express"
-import cors from "cors"
+import path from "path";
+import express, { Express } from "express";
+import cors from "cors";
 
-const app: Express = express()
+const app: Express = express();
 const port = 8080;
 
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
-app.listen(port, () => {console.log("Listening")})
+type WeatherData = {
+    latitude: number;
+    longitude: number;
+    timezone: string;
+    timezone_abbreviation: string;
+    current: {
+        time: string;
+        interval: number;
+        precipitation: number;
+    };
+};
+
+app.get("/api/weather", async (req, res) => {
+    try {
+        const response = await fetch(
+            "https://api.open-meteo.com/v1/forecast?latitude=40.7411&longitude=73.9897&current=precipitation&temperature_unit=fahrenheit&windspeed_unit=mph&timezone=America%2FNew_York&forecast_days=1"
+        );
+        const data = (await response.json()) as WeatherData;
+        const raining = data.current.precipitation > 0.5;
+        res.json({ raining });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Something went wrong" });
+    }
+});
+
+app.listen(port, () => {
+    console.log("Listening");
+});
