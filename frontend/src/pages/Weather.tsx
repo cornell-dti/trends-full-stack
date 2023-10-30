@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { WeatherResponse } from "@fly-chick/types";
-import { BASE_URL_BACKEND } from "@fly-chick/common";
+import { WeatherResponse } from "@full-stack/types";
+import { BASE_URL_BACKEND } from "@full-stack/common";
 
 const getWeather = (): Promise<WeatherResponse> =>
     fetch(`${BASE_URL_BACKEND}/api/weather`).then((res) => res.json());

@@ -1,7 +1,7 @@
 import path from "path";
 import express, { Express } from "express";
 import cors from "cors";
-import { WeatherResponse } from "@fly-chick/types";
+import { WeatherResponse } from "@full-stack/types";
 
 const app: Express = express();
 const port = 8080;

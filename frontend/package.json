@@ -11,8 +11,8 @@
     },
     "dependencies": {
         "@emotion/react": "^11.11.1",
-        "@fly-chick/common": "1.0.0",
-        "@fly-chick/types": "1.0.0",
+        "@full-stack/common": "1.0.0",
+        "@full-stack/types": "1.0.0",
         "@mantine/carousel": "^6.0.19",
         "@mantine/core": "^6.0.19",
         "@mantine/dates": "^6.0.19",
