@@ -22,7 +22,7 @@ type WeatherData = {
 };
 
 app.get("/api/weather", async (req, res) => {
-    console.log("Received GET /api/weather");
+    console.log("GET /api/weather was called");
     try {
         const response = await fetch(
             "https://api.open-meteo.com/v1/forecast?latitude=40.7411&longitude=73.9897&current=precipitation&temperature_unit=fahrenheit&windspeed_unit=mph&timezone=America%2FNew_York&forecast_days=1"
