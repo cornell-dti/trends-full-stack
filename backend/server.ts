@@ -1,6 +1,7 @@
 import path from "path";
 import express, { Express } from "express";
 import cors from "cors";
+import { WeatherResponse } from "@fly-chick/types";
 
 const app: Express = express();
 const port = 8080;
@@ -26,8 +27,10 @@ app.get("/api/weather", async (req, res) => {
             "https://api.open-meteo.com/v1/forecast?latitude=40.7411&longitude=73.9897&current=precipitation&temperature_unit=fahrenheit&windspeed_unit=mph&timezone=America%2FNew_York&forecast_days=1"
         );
         const data = (await response.json()) as WeatherData;
-        const raining = data.current.precipitation > 0.5;
-        res.json({ raining });
+        const output: WeatherResponse = {
+            raining: data.current.precipitation > 0.5,
+        };
+        res.json(output);
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Something went wrong" });

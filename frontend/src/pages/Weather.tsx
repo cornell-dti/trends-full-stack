@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
+import { WeatherResponse } from "@fly-chick/types";
+import { BASE_URL_BACKEND } from "@fly-chick/constants";
+import { coinflip } from "@fly-chick/common";
 
-const getWeather = () =>
-    fetch("http://localhost:8080/api/weather").then((res) => res.json());
+const getWeather = (): Promise<WeatherResponse> =>
+    fetch(`${BASE_URL_BACKEND}/api/weather`).then((res) => res.json());
 
 const Weather = () => {
-    const [raining, setRaining] = useState(null);
+    const [{ raining }, setRaining] = useState<WeatherResponse>({
+        raining: coinflip(),
+    });
 
     useEffect(() => {
         getWeather().then((data) => setRaining(data));
@@ -13,7 +18,7 @@ const Weather = () => {
     return (
         <div>
             <h1>Is it raining in New York?</h1>
-            <p>{raining === null ? "Loading..." : raining ? "Yes" : "No"}</p>
+            <p>{raining ? "Yes" : "No"}</p>
         </div>
     );
 };
