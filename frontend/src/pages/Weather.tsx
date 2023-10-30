@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { WeatherResponse } from "@fly-chick/types";
-import { BASE_URL_BACKEND } from "@fly-chick/constants";
+import { BASE_URL_BACKEND } from "@fly-chick/common";
 
 const getWeather = (): Promise<WeatherResponse> =>
     fetch(`${BASE_URL_BACKEND}/api/weather`).then((res) => res.json());
 
 const Weather = () => {
     const [{ raining }, setRaining] = useState<WeatherResponse>({
-        raining: false,
+        raining: true,
     });
 
     useEffect(() => {
+        console.log("Loading weather...");
         getWeather().then((data) => setRaining(data));
     }, []);
 

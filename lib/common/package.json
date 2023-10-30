@@ -1,5 +1,5 @@
 {
-    "name": "@fly-chick/constants",
+    "name": "@fly-chick/common",
     "version": "1.0.0",
     "main": "index.ts",
     "types": "index.ts",
