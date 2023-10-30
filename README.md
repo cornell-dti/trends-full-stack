@@ -1,6 +1,6 @@
-# [full-stack](https://youtu.be/QSEdEJrdJX0?si=n-zejWv_VW6D28-1)
+# full-stack
 
-A "standard" yet modern full-stack TypeScript web-application template using React/Vite on the frontend and Express on the backend, bundled with Turborepo, and containerized with Docker.
+A "standard" yet modern full-stack TypeScript web-application template using React/Vite on the frontend and Express on the backend, bundled with Turborepo.
 
 ## Using this example
 
