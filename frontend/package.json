@@ -37,8 +37,7 @@
         "react-router-dom": "^6.15.0",
         "sort-by": "^1.2.0",
         "@fly-chick/types": "1.0.0",
-        "@fly-chick/constants": "1.0.0",
-        "@fly-chick/common": "1.0.0"
+        "@fly-chick/constants": "1.0.0"
     },
     "devDependencies": {
         "@types/react": "^18.2.15",

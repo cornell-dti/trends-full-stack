@@ -20,9 +20,6 @@ importers:
 
   backend:
     dependencies:
-      '@fly-chick/common':
-        specifier: 1.0.0
-        version: link:../lib/common
       '@fly-chick/constants':
         specifier: 1.0.0
         version: link:../lib/constants
@@ -66,9 +63,6 @@ importers:
       '@emotion/react':
         specifier: ^11.11.1
         version: 11.11.1(@types/react@18.2.15)(react@18.2.0)
-      '@fly-chick/common':
-        specifier: 1.0.0
-        version: link:../lib/common
       '@fly-chick/constants':
         specifier: 1.0.0
         version: link:../lib/constants
@@ -185,14 +179,11 @@ importers:
         specifier: ^4.4.5
         version: 4.4.5
 
-  lib/common:
-    devDependencies:
-      typescript:
-        specifier: ^4.9.5
-        version: 4.9.5
-
   lib/constants:
     devDependencies:
+      '@types/node':
+        specifier: ^20.8.9
+        version: 20.8.9
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
