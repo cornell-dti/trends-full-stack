@@ -24,7 +24,6 @@ On the frontend:
 
 -   [Vite](https://vitejs.dev/) for frontend development
 -   [React](https://reactjs.org/) for frontend UI
-
 -   [React Router](https://reactrouter.com/) for frontend routing
 -   [Mantine](https://mantine.dev/) for frontend UI components
 -   [Lucide](https://lucide.dev/) for frontend icons
