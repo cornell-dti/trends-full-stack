@@ -35,3 +35,11 @@ On the backend:
 
 -   [Express](https://expressjs.com/) for backend development
 -   [cors](https://expressjs.com/en/resources/middleware/cors.html) for CORS support
+
+## Making Edits
+
+To edit the frontend, `cd` into `frontend` and make changes as you would normally in a standard React app.
+
+To edit the backend, `cd` into `backend` and make changes as you would normally in a standard Express server.
+
+To edit types that are _shared_ between the frontend and backend, `cd` into `lib/types`, and put your types in `index.ts`. You can put miscellaneous types here that you want to share between the frontend and backend in the `src` directory within. Don't forget to export them!
