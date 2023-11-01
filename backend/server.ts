@@ -21,7 +21,7 @@ type WeatherData = {
     };
 };
 
-app.get("/api/weather", async (req, res) => {
+app.get("/weather", async (req, res) => {
     console.log("GET /api/weather was called");
     try {
         const response = await fetch(

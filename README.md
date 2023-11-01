@@ -39,3 +39,24 @@ To edit the frontend, `cd` into `frontend` and make changes as you would normall
 To edit the backend, `cd` into `backend` and make changes as you would normally in a standard Express server.
 
 To edit types that are _shared_ between the frontend and backend, `cd` into `lib/types`, and put your types in `index.ts`. You can put miscellaneous types here that you want to share between the frontend and backend in the `src` directory within. Don't forget to export them!
+
+## Deploying
+
+We recommend using [Fly.io](https://fly.io/) for deployment.
+
+As a fair warning, this will require a credit card. However, you probably won't get charged for it, as Fly.io has a generous free tier (unless for some reason your web-app goes viral).
+
+1. Make an account on [Fly.io](https://fly.io/)
+
+2. Install [flyctl](https://fly.io/docs/hands-on/install-flyctl/)
+
+3. Run `flyctl auth login`
+
+    You may be prompted to add a credit card at this stage. We recommend doing so in order to proceed.
+
+4. Run `flyctl launch`
+
+    When asked for a region, select one close to you (I'd recommend Boston).
+    When asked if you would "like to set up a Postgresql database now". Enter "N".
+    Similarly, they may ask about setting up "an Upstash Redis database". Enter "N".
+    When asked if you'd like to deploy now, enter "y".
