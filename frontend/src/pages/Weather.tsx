@@ -3,7 +3,7 @@ import { WeatherResponse } from "@full-stack/types";
 import { coinflip } from "@full-stack/common";
 
 const getWeather = (): Promise<WeatherResponse> =>
-    fetch(`http://localhost/api/weather`).then((res) => res.json());
+    fetch(`http://localhost:8080/api/weather`).then((res) => res.json());
 
 const Weather = () => {
     const [{ raining }, setRaining] = useState<WeatherResponse>({
