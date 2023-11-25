@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { WeatherResponse } from "@full-stack/types";
 import { coinflip } from "@full-stack/common";
+import { BACKEND_BASE_PATH } from "../constants/Navigation";
 
 const getWeather = (): Promise<WeatherResponse> =>
-    fetch(`http://localhost/api/weather`).then((res) => res.json());
+    fetch(`${BACKEND_BASE_PATH}/weather`).then((res) => res.json());
 
 const Weather = () => {
     const [{ raining }, setRaining] = useState<WeatherResponse>({

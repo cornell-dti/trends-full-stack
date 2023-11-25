@@ -44,7 +44,7 @@ To edit types that are _shared_ between the frontend and backend, `cd` into `lib
 
 We recommend using [Fly.io](https://fly.io/) for deployment.
 
-As a fair warning, this will require a credit card. However, you probably won't get charged for it, as Fly.io has a generous free tier (unless for some reason your web-app goes viral).
+As a fair warning, this will require a credit card. However, you probably won't get charged for it, as Fly.io has a generous free tier.
 
 1. Make an account on [Fly.io](https://fly.io/)
 
@@ -60,3 +60,11 @@ As a fair warning, this will require a credit card. However, you probably won't 
     When asked if you would "like to set up a Postgresql database now". Enter "N".
     Similarly, they may ask about setting up "an Upstash Redis database". Enter "N".
     When asked if you'd like to deploy now, enter "y".
+
+    After launching, the terminal should print the URL at which your app is publicly available.
+
+5. Modify the `BACKEND_BASE_PATH` variable.
+
+    If you haven't already, go to `/frontend/src/constants/Navigation.tsx` and read the `TODO` instructions left there. Then, make the changes accordingly.
+
+6. Run `flyctl deploy` to re-deploy changes to your app to the same URL.
