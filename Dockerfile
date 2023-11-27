@@ -6,6 +6,8 @@ RUN apk add --update nodejs npm
 
 # Install pnpm
 RUN npm install -g pnpm
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
 
 # Set the working directory in the builder
 WORKDIR /app
