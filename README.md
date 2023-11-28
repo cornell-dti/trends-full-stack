@@ -68,3 +68,6 @@ As a fair warning, this will require a credit card. However, you probably won't 
     If you haven't already, go to `/frontend/src/constants/Navigation.tsx` and read the `TODO` instructions left there. Then, make the changes accordingly.
 
 6. Run `flyctl deploy` to re-deploy changes to your app to the same URL.
+
+### Debugging
+If your deployment launch name gets too long. Try going into your (fly.io)[https://fly.io] dashboard and go to `Apps` then delete any current apps you may currently have. Then go back to the console and run `flyctl launch` when asked "Do you want to tweak these settings before proceeding?" type "y" and then change the name to your desired name.
