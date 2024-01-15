@@ -4,6 +4,8 @@ import cors from "cors";
 import { WeatherResponse } from "@full-stack/types";
 
 const app: Express = express();
+
+const hostname = "0.0.0.0";
 const port = 8080;
 
 app.use(cors());
@@ -21,7 +23,7 @@ type WeatherData = {
     };
 };
 
-app.get("/api/weather", async (req, res) => {
+app.get("/weather", async (req, res) => {
     console.log("GET /api/weather was called");
     try {
         const response = await fetch(
@@ -38,6 +40,6 @@ app.get("/api/weather", async (req, res) => {
     }
 });
 
-app.listen(port, "0.0.0.0", () => {
+app.listen(port, hostname, () => {
     console.log("Listening");
 });
