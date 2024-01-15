@@ -44,7 +44,7 @@ To edit types that are _shared_ between the frontend and backend, `cd` into `lib
 
 We recommend using [Fly.io](https://fly.io/) for deployment.
 
-As a fair warning, this will require a credit card. However, you probably won't get charged for it, as Fly.io has a generous free tier.
+As a fair warning, this will require a credit card. However, you shouldn't get charged for it, as Fly.io has a generous free tier.
 
 1. Make an account on [Fly.io](https://fly.io/)
 
