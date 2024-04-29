@@ -2,6 +2,7 @@ import path from "path";
 import express, { Express } from "express";
 import cors from "cors";
 import { WeatherResponse } from "@full-stack/types";
+import fetch from "node-fetch";
 
 const app: Express = express();
 
