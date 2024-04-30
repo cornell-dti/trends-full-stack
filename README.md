@@ -56,10 +56,7 @@ As a fair warning, this will require a credit card. However, you shouldn't get c
 
 4. Run `flyctl launch`
 
-    When asked for a region, select one close to you (I'd recommend Boston).
-    When asked if you would "like to set up a Postgresql database now". Enter "N".
-    Similarly, they may ask about setting up "an Upstash Redis database". Enter "N".
-    When asked if you'd like to deploy now, enter "y".
+    If asked to tweak settings, answer 'N' unless you know what you're doing.
 
     After launching, the terminal should print the URL at which your app is publicly available.
 
@@ -70,4 +67,5 @@ As a fair warning, this will require a credit card. However, you shouldn't get c
 6. Run `flyctl deploy` to re-deploy changes to your app to the same URL.
 
 ### Debugging
+
 If your deployment launch name gets too long. Try going into your (fly.io)[https://fly.io] dashboard and go to `Apps` then delete any current apps you may currently have. Then go back to the console and run `flyctl launch` when asked "Do you want to tweak these settings before proceeding?" type "y" and then change the name to your desired name.
