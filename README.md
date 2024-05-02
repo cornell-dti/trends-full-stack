@@ -2,6 +2,8 @@
 
 A "standard" yet modern full-stack TypeScript web-application template using React/Vite on the frontend and Express on the backend, bundled with Turborepo.
 
+Conceptually, this monorepo is divided into two sub-repos: frontend, and backend. Since they are in effect separate repos, don't try to install or use code between the two! Instead, treat them separately. They only work together during local development (ie `pnpm dev`) and deployment.
+
 ## Using this example
 
 Run the following command:
@@ -14,6 +16,12 @@ pnpm dev
 
 The server will be available at `http://localhost:8080`.
 The client will be available at `http://localhost:5173`.
+
+## Setting up Firebase
+
+Follow the course instructions [here](https://webdev.cornelldti.org/docs/lecture7#instruction-to-connect-firebase-with-demo-code).
+
+See the `TODO` in `backend/firebase.ts` to complete setup.
 
 ## What's inside?
 
@@ -31,6 +39,10 @@ On the frontend:
 On the backend:
 
 -   [Express](https://expressjs.com/) for backend development
+
+## Installing Additional Packages
+
+Since backend and frontend are separate packages, please `cd backend` or `cd frontend` before running `pnpm add <package>` to install a package in the correct place.
 
 ## Making Edits
 

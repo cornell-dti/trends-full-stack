@@ -3,6 +3,7 @@ import express, { Express } from "express";
 import cors from "cors";
 import { WeatherResponse } from "@full-stack/types";
 import fetch from "node-fetch";
+import { db } from "./firebase";
 
 const app: Express = express();
 
@@ -39,6 +40,21 @@ app.get("/weather", async (req, res) => {
         console.error(error);
         res.status(500).json({ error: "Something went wrong" });
     }
+});
+
+// Just an example endpoint to showcase how to use the Firestore database
+app.get("/get-all-users", async (req, res) => {
+    console.log("GET /api/get-everything was called");
+    const usersCollection = db.collection("Users"); // Assuming you have a collection called "Users"
+    const doc = await usersCollection.get();
+
+    const allUsers: Record<string, any> = {};
+    doc.forEach((d) => {
+        console.log("d: ", d.id, d.data());
+        allUsers[d.id] = d.data();
+    });
+
+    res.json(allUsers);
 });
 
 app.listen(port, hostname, () => {
